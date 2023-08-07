@@ -43,7 +43,7 @@ public class Dialogue : MonoBehaviour
 			_pressSpaceUI.SetActive(false);
 		}
 
-		if (PlayerController.instance.howManyKeys != 4)
+		if (PlayerController.instance.howManyKeys <= 3)
         {
 			if (_isPlayerInRange && Input.GetButtonDown("Jump"))
 			{
@@ -70,7 +70,7 @@ public class Dialogue : MonoBehaviour
 			{
 				_end = true;
 				_dialogueLines[0] = "Congratulations, you've accomplished it! Your efforts have paid off, and we extend our heartfelt gratitude. Behold, your well-deserved reward awaits you glorious treasure of unimaginable wonders!";
-				PlayerController.instance.BeginScene();
+				PlayerController.instance.inScene = true;
 				_chest.GetComponent<Animator>().SetTrigger("OpenChest");
 				_chest.GetComponent<Animator>().SetTrigger("End");
 
@@ -117,6 +117,7 @@ public class Dialogue : MonoBehaviour
 	{
 		_didDialogueStart = true;
 		_dialoguePanel.SetActive(true);
+		PlayerController.instance.inScene = true;
 		_lineIndex = 0;
 		StartCoroutine(ShowLine());
 
@@ -133,6 +134,8 @@ public class Dialogue : MonoBehaviour
 		else
 		{
 			_didDialogueStart = false;
+			if(!_end)
+				PlayerController.instance.inScene = false;
 			_dialoguePanel.SetActive(false);
 		}
 	}
@@ -161,6 +164,8 @@ public class Dialogue : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			_isPlayerInRange = false;
+			_didDialogueStart = false;
+			_dialoguePanel.SetActive(false);
 		}
 	}
 }

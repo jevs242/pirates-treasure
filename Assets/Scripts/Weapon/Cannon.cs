@@ -29,8 +29,7 @@ public class Cannon : MonoBehaviour
 			Destroy(other.gameObject);
 			Destroy(gameObject);
 		}
-
-		if (other.gameObject.CompareTag("Rock"))
+		else if (other.gameObject.CompareTag("Rock"))
 		{
 			Instantiate(_fbxRockExplotion, gameObject.transform.transform.position, transform.rotation);
 			AudioManager.instance.PlaySFX(0);
@@ -38,6 +37,13 @@ public class Cannon : MonoBehaviour
 			Destroy(gameObject);
 
 		}
+		else if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("NPC"))
+		{
+			Instantiate(_fbxShipExplotion, other.gameObject.transform.position + new Vector3(0, 30, 0), transform.rotation);
+			AudioManager.instance.PlaySFX(0);
+			Destroy(gameObject);
+		}
+		
 	}
 
 }

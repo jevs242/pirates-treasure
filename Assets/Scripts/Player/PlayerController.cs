@@ -97,6 +97,12 @@ public class PlayerController : MonoBehaviour
 		StartCoroutine(SceneDelay());
 	}
 
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (!collision.gameObject.CompareTag("Water"))
+			AudioManager.instance.PlaySFX(3);
+	}
+
 	public IEnumerator SceneDelay()
 	{
 		_inScene = true;
@@ -118,4 +124,9 @@ public class PlayerController : MonoBehaviour
 		set { _checkpoint = value; }
 	}
 
+	public bool inScene
+	{
+		get { return _inScene; }
+		set { _inScene = value; }
+	}
 }
