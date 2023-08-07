@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cannonBall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0308dd274b749164291fd8c0911637f3, type: 3}
+      propertyPath: m_TagString
+      value: Cannon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0308dd274b749164291fd8c0911637f3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -99,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f70ca6e9d1df844b6b677550ffc38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fbxShipExplotion: {fileID: 7946335871967924219, guid: f085c99ff8a11a243b0bd2c43c183f36, type: 3}
+  _fbxRockExplotion: {fileID: 7706878311134886863, guid: 814efdab29d2b344f9666433a9da5a36, type: 3}
 --- !u!54 &1513240752802073848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,7 +131,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &225353606517405358
 SphereCollider:
   m_ObjectHideFlags: 0

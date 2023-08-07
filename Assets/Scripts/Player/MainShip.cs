@@ -37,4 +37,6 @@ public class MainShip : MonoBehaviour
 		canFire[position] = true;
 	}
 
+
+
 }
