@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9aa8ed67591432941bb76f12eb23ff91, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 56113b3b655ab7349bab4d7d405c258a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.64948714, g: 0.77311146, b: 0.834781, a: 1}
+  m_IndirectSpecularColor: {r: 0.5039817, g: 0.7965214, b: 0.9949359, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5120,15 +5120,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3923903248794352815, guid: e65ad792271e1134396560144174cc4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1558.3467
+      value: 1558.3516
       objectReference: {fileID: 0}
     - target: {fileID: 3923903248794352815, guid: e65ad792271e1134396560144174cc4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3812.3203
+      value: 3812.2598
       objectReference: {fileID: 0}
     - target: {fileID: 3923903248794352815, guid: e65ad792271e1134396560144174cc4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5772.3237
+      value: 5772.2266
       objectReference: {fileID: 0}
     - target: {fileID: 3923903248794352815, guid: e65ad792271e1134396560144174cc4b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8626,7 +8626,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1279819930}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: BeginPlay
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14958,6 +14958,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1087600146959675586, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087600146959675586, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087600146959675586, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087600146959675586, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -15021,6 +15033,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -76
       objectReference: {fileID: 0}
+    - target: {fileID: 1918860304687919525, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_Name
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 2119944895214020443, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1200
@@ -15048,6 +15064,12 @@ PrefabInstance:
     - target: {fileID: 3091248526063411751, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188663414436878844, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_Text
+      value: 'Restart
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3188663414436878844, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_Color.b
@@ -15121,9 +15143,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5154747346959571198, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 190.64
+      objectReference: {fileID: 0}
     - target: {fileID: 5261047464110813955, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309908765478970183, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 5560660761157252999, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_Color.b
@@ -15154,6 +15184,14 @@ PrefabInstance:
       value: UI Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6008046752197358953, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196420637628140518, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414118672875270469, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -15207,7 +15245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119922762687660266, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4
+      value: -4.3600335
       objectReference: {fileID: 0}
     - target: {fileID: 7559111854264296358, guid: 3adeb8bdf9765b84d8bf4572cd260d25, type: 3}
       propertyPath: m_LocalScale.x
@@ -29117,7 +29155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1688310056
 RectTransform:
   m_ObjectHideFlags: 0
