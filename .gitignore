@@ -23,6 +23,7 @@ crashlytics-build.properties
 # Visual Studio / Visual Studio Code specific
 .vs/
 .vscode/
+.vsconfig
 *.csproj
 *.unityproj
 *.sln
